@@ -9,6 +9,13 @@ $(document).ready(function(){
             console.log(res);
         })
 
+    });
+
+    $(".eat").on("click", function(){
+        $.post("/addburger", {burger:burgerName}, function(res){
+            console.log(res);
+        })
+        console.log($(this).attr("data-id"))
     })
 
 
